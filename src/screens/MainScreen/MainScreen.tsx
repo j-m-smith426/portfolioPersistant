@@ -12,15 +12,17 @@ import classes from "./MainScreen.module.css";
 
 const MainScreen:FC = (props) => {
     return (
-        <Fragment>
+        <div className={classes.container}>
+            <div>
             <NavBar />
+            </div>
             <div className={classes.content}>
                 <About />
                 <Skills />
                 <Projects />
                 <History />
             </div>
-        </Fragment>
+        </div>
     );
 }
 

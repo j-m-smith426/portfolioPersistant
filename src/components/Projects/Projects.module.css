@@ -1,0 +1,9 @@
+.container {
+  padding: 1%;
+  justify-content: center;
+  text-align: left;
+}
+
+.description {
+  display: flex;
+}

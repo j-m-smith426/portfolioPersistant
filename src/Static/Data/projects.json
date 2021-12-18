@@ -1,0 +1,64 @@
+{
+    "Projects":[
+        {
+            "Title":"PerfectPersonellPlacement",
+            "Images":[
+            "https://github.com/Perfect-Personnel-Placement/frontend/blob/main/src/assets/images/MainTrainerScreen.png?raw=true",
+            "https://github.com/Perfect-Personnel-Placement/frontend/raw/main/src/assets/images/DeleteTrainerScreen.png",
+            "https://github.com/Perfect-Personnel-Placement/frontend/raw/main/src/assets/images/EditTrainerScreen.png",
+            "https://github.com/Perfect-Personnel-Placement/frontend/raw/main/src/assets/images/AddTrainerScreen.png"
+            ],
+            "Description":"In this project I was given the role of scrum master of the frontend. This project was developed as a planning app for future classes. My particular contribution were the components related to the trainers page.",
+            "Technology":
+                [
+                    {
+                        "Type":"Frontend technology used",
+                        "tech":[
+                            "ReactNative",
+                            "Expo",
+                            "Jest",
+                            "Enzyme",
+                            "Redux",
+                            "Docker"
+                        ]
+                    }
+                ],  
+                "GitHub":"https://github.com/Perfect-Personnel-Placement/frontend"
+            },
+            {
+                "Title":"ScouterServerless",
+                "Images":[
+                "https://github.com/RevatureRobert/team-4-Project-2-FE/raw/main/app/assets/Login%20Screen.png",
+                "https://github.com/RevatureRobert/team-4-Project-2-FE/raw/main/app/assets/Home%20Screen.png",
+                "https://github.com/RevatureRobert/team-4-Project-2-FE/raw/main/app/assets/All%20Anime%20Screen.png",
+                "https://github.com/RevatureRobert/team-4-Project-2-FE/raw/main/app/assets/Profile%20Screen.png"
+                ],
+                "Description":"For this project I took the role of team lead and scrum master. I helped work on both the frontend and backend repositories",
+                "Technology":
+                    [
+                        {
+                            "Type":"Frontend technology used",
+                            "tech":[
+                                "ReactNative",
+                                "Expo",
+                                "Jest",
+                                "Enzyme",
+                                "Redux"
+                            ]
+                        },
+                        {
+                            "Type":"Backend technology used",
+                            "tech":[
+                                "Node.js",
+                                "AWS Lambda",
+                                "AWS API Gateway",
+                                "AWS S3",
+                                "Jest",
+                                "Docker"   
+                            ]
+                        }
+                    ],  
+                    "GitHub":"https://github.com/j-m-smith426/team-4-Project-2-FE"
+                }
+]
+}

@@ -8,3 +8,7 @@
   text-align: center;
   padding: 2%;
 }
+
+.container {
+  position: absolute;
+}
