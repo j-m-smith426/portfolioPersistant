@@ -1,7 +1,8 @@
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import { List, ListItemButton, ListItemIcon, ListItemText, Collapse } from "@mui/material";
 import { FC, ReactElement, useState } from "react";
-import { JsxElement } from "typescript";
-
 import classes from "./BaseDropdown.module.css";
+
 
 interface IProps
 {
@@ -19,24 +20,41 @@ const BaseDropdown: FC<IProps> = (props) =>
         return open;
         
     }
-
+    const handleClick = () =>
+    {
+        setIsOpen(prev => !prev);
+    }
+    
+    const resolveContent = () =>
+    {
+        return props.content.map((item, index) => (
+        <ListItemButton sx={{ pl: 4 }} key={index}>
+            <ListItemText primary={item} />
+        </ListItemButton>
+        ))
+    }
 
     const resolveTitle = ():ReactElement =>
     {
-       return props.toggle ? (<span onClick={() => setIsOpen(prevState => !prevState)}>{props.title}</span>) :
-        <span className={classes.title}>{props.title}</span>
+        return (<><ListItemIcon>
+            
+        </ListItemIcon><ListItemText primary={props.title} />
+      { isOpen ? <ExpandLess /> : <ExpandMore /> }
+      </>)
     }
-    console.log(props.content);
 
     return (
-        <div className={classes.dropdown }>
-            {resolveTitle()}
-            {props.content.map((item, index) => (
-                <div className={classes["dropdown-content"] + " " + resolveClass()} key={index}>
-                    {item}
-                </div>
-            ))}
-        </div>
+        <List>
+        <ListItemButton onClick={handleClick}>
+        {resolveTitle()}
+      </ListItemButton>
+            <Collapse in={isOpen
+            } timeout="auto" unmountOnExit>
+        <List component="div" disablePadding>
+          {resolveContent()}
+        </List>
+            </Collapse>
+            </List>
     );
 }
 
