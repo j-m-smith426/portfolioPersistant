@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Projects:FC = (props) => {
     return (
-        <div>Projects</div>
+        <><a id="projects"></a><div>Projects</div></>
     );
 }
 
