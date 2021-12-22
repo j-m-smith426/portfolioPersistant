@@ -10,7 +10,7 @@ const NavBar:FC = (props) => {
             <li className={classes.li}><a href="#projects">Projects</a></li>
             <li className={classes.li}><a href="#skills">Skills</a></li>
             <li className={classes.li}><a href="#about">About</a></li>
-            <li className={classes.li}><a href="/">Home</a></li>
+            <li className={classes.li}><a href="./">Home</a></li>
         </ul>        
     );
 }
