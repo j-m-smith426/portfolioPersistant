@@ -10,17 +10,16 @@ import classes from "./MainScreen.module.css";
 
 const MainScreen:FC = (props) => {
     return (
-        <div className={classes.container}>
-            <div>
+        <><div className={classes.nav}>
             <NavBar />
-            </div>
-            <div className={classes.content}>
-                <About />
-                <Skills />
-                <Projects />
-                {/* <History /> */}
-            </div>
-        </div>
+        </div><div className={classes.container}>
+                <div className={classes.content}>
+                    <About />
+                    <Skills />
+                    <Projects />
+                    {/* <History /> */}
+                </div>
+            </div></>
     );
 }
 

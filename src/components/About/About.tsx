@@ -8,7 +8,7 @@ const About:FC = (props) => {
     return (
         <>
             <Grid container justifyContent="center" id="about" alignItems="center" style={{ padding: "5%" }} justifyItems="center">
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12} md={6} className={classes.avatar_box}>
                 <Avatar alt="Joab Smith" src={profileImage} sx={{ width: 200, height: 200 }} className={classes.avatar} />
             </Grid>
             <Grid item sm={12} md={6}>
