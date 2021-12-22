@@ -1,0 +1,17 @@
+.content {
+  background-color: white;
+  margin-top: 60px;
+  max-width: 70%;
+  margin-left: 15%;
+}
+
+.section {
+  margin: 1%;
+  text-align: center;
+  padding: 2%;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+}

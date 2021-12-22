@@ -1,0 +1,32 @@
+{
+    "skills": [{
+    "Title":"Frontend",
+    "skills":[
+        "JavaScript",
+        "Typescript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "React",
+        "React Native"
+
+    ]},{
+    "Title":"Backend",
+    "skills":
+    [
+        "Nodejs",
+        "Express",
+        "Springboot",
+        "Java"
+    ]},{
+    "Title":"AWS",
+    "skills":[
+        "DynamoDB",
+        "Lambda",
+        "RDS",
+        "S3",
+        "API GAteway"
+    ]}
+    ]
+    
+}

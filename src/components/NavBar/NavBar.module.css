@@ -1,13 +1,24 @@
 .ul {
   list-style-type: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   background-color: green;
+  z-index: 1;
+  align-items: center;
 }
 
 .li {
   float: right;
+  display: inline;
+}
+
+.name {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  color: white;
 }
 
 .li a {

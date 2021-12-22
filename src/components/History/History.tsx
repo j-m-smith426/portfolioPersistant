@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const History:FC = (props) => {
     return (
-        <div>History</div>
+        <><a id="history"></a><div>History</div></>
     );
 }
 
