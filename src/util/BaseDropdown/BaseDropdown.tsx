@@ -1,7 +1,6 @@
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { List, ListItemButton, ListItemIcon, ListItemText, Collapse } from "@mui/material";
 import { FC, ReactElement, useState } from "react";
-import classes from "./BaseDropdown.module.css";
 
 
 interface IProps
@@ -14,12 +13,6 @@ interface IProps
 const BaseDropdown: FC<IProps> = (props) =>
 {
     const [isOpen, setIsOpen] = useState(false);
-
-    const resolveClass = ():string => {
-        const open:string = isOpen ? classes.active : "";
-        return open;
-        
-    }
     const handleClick = () =>
     {
         setIsOpen(prev => !prev);
