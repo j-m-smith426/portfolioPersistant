@@ -15,7 +15,7 @@ const Skills: FC = (props) =>
     return (
         <>
 
-            <Grid container id="skills" columnGap={4}  className={classes.container}>
+            <Grid container id="skills" columnGap={5} justifyContent={"center"} className={classes.container}>
                 <Grid item xs={12} className={classes.item + " " + classes.title}>
                     <h3>Skills</h3>
                 </Grid>

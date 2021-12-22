@@ -1,10 +1,6 @@
 .ul {
   list-style-type: none;
-  position: absolute;
-  top: 0;
   width: 100%;
-  background-color: green;
-  z-index: 1;
   align-items: center;
 }
 
@@ -31,4 +27,12 @@
 
 .li a:hover {
   background-color: plum;
+}
+
+.container {
+  display: block;
+  height: max-content;
+  width: 100%;
+  background-color: green;
+  overflow: auto;
 }

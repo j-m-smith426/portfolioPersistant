@@ -10,6 +10,7 @@ import classes from "./MainScreen.module.css";
 
 const MainScreen:FC = (props) => {
     return (
+        
         <><div className={classes.nav}>
             <NavBar />
         </div><div className={classes.container}>
@@ -17,9 +18,10 @@ const MainScreen:FC = (props) => {
                     <About />
                     <Skills />
                     <Projects />
-                    {/* <History /> */}
+
                 </div>
             </div></>
+        
     );
 }
 
