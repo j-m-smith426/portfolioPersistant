@@ -25,13 +25,13 @@ const About: FC = (props) =>
                         I worked with a team to develop a mobile application that implemented a serverless backend using AWS. Currently I am branching out with other languages for use in personal projects.
                         <div className={classes.links}>
                             <a href="http://www.linkedin.com/in/joab-smith">
-                                <img src={linkedinIcon} />
+                                <img src={linkedinIcon} alt="linkedin"/>
                             </a>
                             <a href="https://github.com/j-m-smith426">
-                                <img src={githubIcon} />
+                                <img src={githubIcon} alt="github"/>
                             </a>
-                            <a href="#">
-                            <img src={emailIcon} />
+                            <a href="./">
+                            <img src={emailIcon} alt="email"/>
                             </a>
                             <a className={classes.resumeLink} href="../../Static/JoabSmithResume.docx" download={"JoabSmithResume.docx"}>Download Resume</a>
                         </div>

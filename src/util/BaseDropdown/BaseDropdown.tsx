@@ -18,7 +18,7 @@ const BaseDropdown: FC<IProps> = (props) =>
     useEffect(() =>
     {
         props.title === "Frontend" && setIsOpen(true);
-    }, []);
+    }, [props.title]);
 
 
     const handleClick = () =>
@@ -45,7 +45,7 @@ const BaseDropdown: FC<IProps> = (props) =>
 
     return (
         <List>
-        <ListItemButton onClick={handleClick}>
+        <ListItemButton onClick={handleClick} className={classes.titleButton}>
         {resolveTitle()}
       </ListItemButton>
             <Collapse in={isOpen
