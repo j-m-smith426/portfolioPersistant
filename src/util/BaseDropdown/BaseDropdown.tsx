@@ -1,8 +1,8 @@
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-import { List, ListItemButton, ListItemIcon, ListItemText, Collapse } from "@mui/material";
-import { FC, ReactElement, useState } from "react";
-import classes from "./BaseDropdown.module.css";
+import { List, ListItemButton, ListItemText, Collapse } from "@mui/material";
+import { FC, ReactElement, useEffect, useState } from "react";
 
+import classes from "./BaseDropdown.module.css";
 
 interface IProps
 {
@@ -15,11 +15,12 @@ const BaseDropdown: FC<IProps> = (props) =>
 {
     const [isOpen, setIsOpen] = useState(false);
 
-    const resolveClass = ():string => {
-        const open:string = isOpen ? classes.active : "";
-        return open;
-        
-    }
+    useEffect(() =>
+    {
+        props.title === "Frontend" && setIsOpen(true);
+    }, [props.title]);
+
+
     const handleClick = () =>
     {
         setIsOpen(prev => !prev);
@@ -28,24 +29,23 @@ const BaseDropdown: FC<IProps> = (props) =>
     const resolveContent = () =>
     {
         return props.content.map((item, index) => (
-        <ListItemButton sx={{ pl: 4 }} key={index}>
-            <ListItemText primary={item} />
+        <ListItemButton sx={{ pl: 4 }} key={index} className={classes.text}>
+                <ListItemText primary={item} />
         </ListItemButton>
         ))
     }
 
     const resolveTitle = ():ReactElement =>
     {
-        return (<><ListItemIcon>
-            
-        </ListItemIcon><ListItemText primary={props.title} />
+        return (<>
+            <ListItemText primary={props.title} />
       { isOpen ? <ExpandLess /> : <ExpandMore /> }
       </>)
     }
 
     return (
         <List>
-        <ListItemButton onClick={handleClick}>
+        <ListItemButton onClick={handleClick} className={classes.titleButton}>
         {resolveTitle()}
       </ListItemButton>
             <Collapse in={isOpen

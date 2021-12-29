@@ -1,9 +1,38 @@
-.avatar {
-  margin-left: 30%;
-  margin-bottom: 5%;
-  margin-right: 5%;
+.avatar_box {
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutme {
   max-width: 500px;
+  text-align: left;
+}
+
+.links{
+  padding:5%;
+  display:inline-flex;
+  width: 100%;
+  justify-content: center;
+  
+}
+
+.links a{
+  padding:1%;
+  align-self: center;
+}
+
+.resumeLink {
+  width: auto;
+  height: 32px;
+  background-color: green;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+.resumeLink:hover {
+  background-color: plum;
 }

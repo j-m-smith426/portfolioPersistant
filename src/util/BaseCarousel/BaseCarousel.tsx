@@ -1,5 +1,5 @@
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
-import { Paper, Typography, MobileStepper, Button, useTheme } from "@mui/material";
+import { Paper, MobileStepper, Button, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { FC, Fragment, useState } from "react";
 import SwipeableViews from "react-swipeable-views";

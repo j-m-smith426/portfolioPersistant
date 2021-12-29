@@ -26,7 +26,7 @@ const Projects: FC = (props) =>
                             {project.GitHub && <Link href={project.GitHub}>GitHub Link</Link>}
                             </ListItem>
                         </Grid>
-                        <Grid container justifyContent="center" item xs={12} sm={6} className={classes.carouselItem}>
+                        <Grid container justifyContent="flex-end" item xs={12} sm={6} className={classes.carouselItem}>
                             <BaseCarousel images={project.Images}/>
                             </Grid>
                     </Grid>

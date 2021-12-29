@@ -15,11 +15,15 @@ const Skills: FC = (props) =>
     return (
         <>
 
-            <Grid container id="skills" columnGap={4}  className={classes.container}>
+            <Grid container id="skills" columnGap={5} justifyContent={"center"} className={classes.container}>
                 <Grid item xs={12} className={classes.item + " " + classes.title}>
                     <h3>Skills</h3>
                 </Grid>
                 {dropdowns}
+                {dropdowns.length % 2 !== 0 && (
+                    <Grid item sm={12} md={5} className={classes.item}>
+                </Grid>
+                )}
             </Grid></>
     );
 }
