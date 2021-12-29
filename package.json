@@ -2,7 +2,7 @@
   "name": "portfolio-persistant",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://j-m-smith426.github.io/portfolioPersistant",
+  "homepage": "https://jsmithportfolio.netlify.app",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
