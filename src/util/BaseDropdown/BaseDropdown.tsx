@@ -1,6 +1,6 @@
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { List, ListItemButton, ListItemText, Collapse } from "@mui/material";
-import { FC, ReactElement, useState } from "react";
+import { FC, ReactElement, useEffect, useState } from "react";
 
 import classes from "./BaseDropdown.module.css";
 
@@ -14,6 +14,13 @@ interface IProps
 const BaseDropdown: FC<IProps> = (props) =>
 {
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() =>
+    {
+        props.title === "Frontend" && setIsOpen(true);
+    }, []);
+
+
     const handleClick = () =>
     {
         setIsOpen(prev => !prev);

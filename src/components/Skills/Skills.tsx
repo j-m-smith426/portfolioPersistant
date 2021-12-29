@@ -20,6 +20,10 @@ const Skills: FC = (props) =>
                     <h3>Skills</h3>
                 </Grid>
                 {dropdowns}
+                {dropdowns.length % 2 !== 0 && (
+                    <Grid item sm={12} md={5} className={classes.item}>
+                </Grid>
+                )}
             </Grid></>
     );
 }
