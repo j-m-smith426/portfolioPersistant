@@ -33,7 +33,7 @@ const About: FC = (props) =>
                             <a href="./">
                             <img src={emailIcon} alt="email"/>
                             </a>
-                            <a className={classes.resumeLink} href="../../Static/JoabSmithResume.docx" download={"JoabSmithResume.docx"}>Download Resume</a>
+                            <a className={classes.resumeLink} href="%PUBLIC_URL%/JoabSmithResume.docx" download={"JoabSmithResume.docx"}>Download Resume</a>
                         </div>
                 </div>
             </Grid>
