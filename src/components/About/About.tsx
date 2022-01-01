@@ -1,5 +1,5 @@
 import { Avatar, Grid } from "@mui/material";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 import classes from "./About.module.css";
 import profileImage from "../../Static/Images/JoabSmith.jpg"
@@ -9,6 +9,20 @@ import emailIcon from "../../Static/Images/email.png"
 
 const About: FC = (props) =>
 {
+    const [resumeURL, setResumeURL] = useState("");
+    useEffect(() =>
+    {
+        getResumeURL();
+    },[])
+
+    const getResumeURL = async() =>
+    {
+        const response = await fetch('%PUBLIC_URL%/JoabSmithResume.docx');
+        let blob = await response.blob();
+        let URL = window.URL.createObjectURL(blob);
+
+        setResumeURL(URL);
+    }
     
     return (
         <>
@@ -33,7 +47,7 @@ const About: FC = (props) =>
                             <a href="./">
                             <img src={emailIcon} alt="email"/>
                             </a>
-                            <a className={classes.resumeLink} href="%PUBLIC_URL%/JoabSmithResume.docx" download={"JoabSmithResume.docx"}>Download Resume</a>
+                            <a className={classes.resumeLink} href={resumeURL} download={"JoabSmithResume.docx"}>Download Resume</a>
                         </div>
                 </div>
             </Grid>
