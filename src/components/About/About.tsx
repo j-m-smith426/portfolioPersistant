@@ -17,12 +17,18 @@ const About: FC = (props) =>
 
     const getResumeURL = async() =>
     {
-        const response = await fetch('%PUBLIC_URL%/JoabSmithResume.pdf');
+        const response = await fetch(process.env.PUBLIC_URL +'/JoabSmithResume.pdf', {
+            headers: {
+                'Content-Type': 'application/pdf'
+            },
+            mode: 'no-cors'
+        });
         let blob = await response.blob();
         let URL = window.URL.createObjectURL(blob);
 
         setResumeURL(URL);
     }
+
     
     return (
         <>
@@ -47,7 +53,7 @@ const About: FC = (props) =>
                             <a href="./">
                             <img src={emailIcon} alt="email"/>
                             </a>
-                            <a className={classes.resumeLink} href={resumeURL} download={"JoabSmithResume.pdf"}>Download Resume</a>
+                            <a className={classes.resumeLink} href={resumeURL} download="JoabSmithResume.pdf">Download Resume</a>
                         </div>
                 </div>
             </Grid>
