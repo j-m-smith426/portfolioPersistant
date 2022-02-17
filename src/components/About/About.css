@@ -1,0 +1,10 @@
+.about_text{
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    width:50%;
+    margin-left: 50%;
+}

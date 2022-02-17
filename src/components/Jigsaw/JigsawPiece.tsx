@@ -1,4 +1,5 @@
 import * as React from "react";
+import JigsawContent from "./JigsawContenet";
 
 interface IJigsawPieceProps {
   topLeft?: boolean;
@@ -8,6 +9,7 @@ interface IJigsawPieceProps {
   className: string;
   title: string;
   onClick: React.Dispatch<React.SetStateAction<Number | null>>;
+  bgImage: string;
 }
 
 const JigsawPiece: React.FC<IJigsawPieceProps> = (props) => {
@@ -38,9 +40,13 @@ const JigsawPiece: React.FC<IJigsawPieceProps> = (props) => {
       className={"piece " + position + " " + props.className}
       onClick={() => props.onClick(value)}
     >
-      <div className="text">
-        <h2>{title}</h2>
-      </div>
+      <div className="bg" />
+      {props.className === "" && (
+        <div className="text">
+          <h2>{title}</h2>
+        </div>
+      )}
+      {props.className === "selected" && <JigsawContent selection={value} />}
       <div className={"cover " + position} />
     </div>
   );

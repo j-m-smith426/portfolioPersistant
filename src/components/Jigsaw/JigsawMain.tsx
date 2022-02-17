@@ -2,6 +2,7 @@ import * as React from "react";
 import JigsawPiece from "./JigsawPiece";
 
 import "./Jigsaw.css";
+import image from "../../Images/JoabSmith.jpg";
 
 interface IJigsawMainProps {}
 
@@ -55,24 +56,28 @@ const JigsawMain: React.FunctionComponent<IJigsawMainProps> = (props) => {
         className={setAboutClass()}
         title="About"
         onClick={setSelected}
+        bgImage={image}
       />
       <JigsawPiece
         topRight
         className={setSkillsClass()}
         title="Skills"
         onClick={setSelected}
+        bgImage={image}
       />
       <JigsawPiece
         botLeft
         className={setProjectClass()}
         title="Project"
         onClick={setSelected}
+        bgImage={image}
       />
       <JigsawPiece
         botRight
         className={setContactClass()}
         title="Contact"
         onClick={setSelected}
+        bgImage={image}
       />
     </div>
   );
