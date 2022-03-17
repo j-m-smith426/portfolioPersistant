@@ -13,5 +13,8 @@
   align-items: center;
 }
 
-
+.anchor{
+  position: relative;
+  padding-top: 80px;
+}
 

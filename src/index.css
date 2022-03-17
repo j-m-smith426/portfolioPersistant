@@ -15,8 +15,8 @@ code {
 :root{
 
   --primary-color: #6DD57F;
-  --secondary-color: #343819;
-  --accent-color: #68EDCB;
+  --secondary-color: rgb(52, 56, 25);
+  --accent-color: rgb(166, 166, 150);
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;

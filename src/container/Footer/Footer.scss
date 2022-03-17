@@ -1,0 +1,68 @@
+.app__footer-box{
+    display: flex;
+    
+    flex-direction: column;
+    // height: 50vh;
+    background: var(--primary-color);
+
+    div{
+        display: flex;
+        justify-content: space-evenly;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.app__contact-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex:0.4;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.app__contact-form{
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+    font-size: large;
+    
+    label{
+        margin-right: 2px;
+        text-align: left;
+    }
+    
+        margin: 10px;
+        label{
+            margin-right: 2px;
+            // text-align: left;
+        }   
+        input[type=text], input[type=email]{
+            font-size: medium;
+            padding: 2px;
+        }
+
+        
+    
+    textarea{
+        font-size: medium;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+
+       label{
+           text-align: left;
+       }
+
+    }
+
+    input[type=submit]{
+        padding: 1rem;
+    }
+}

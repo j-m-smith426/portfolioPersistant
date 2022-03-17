@@ -6,13 +6,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: rgba( 52, 56, 25, 0.2);
+    background:  rgba(166, 166, 150, 0.4);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(52, 56, 25, 0.8);
     padding: 1rem 1rem;
 
     position:fixed;
+    top: 0;
     z-index: 2;
 }
 
@@ -77,10 +78,11 @@
 
     div{
         position: fixed;
-        width: 70%;
+        width: 60%;
         top: 0;
         bottom: 0;
         right: 0;
+        background: rgb(166, 166, 150) !important;
 
         display: flex;
         flex-direction: column;
@@ -107,7 +109,9 @@
                 
                 a{
                     text-decoration: none;
-                    color: var(--secondary-color);
+                    text-transform: uppercase;
+                    color: var(--black-color);
+                    z-index: 6;
                 }
             } 
         }
