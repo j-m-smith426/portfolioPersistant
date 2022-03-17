@@ -23,7 +23,9 @@ const Footer = () => {
 
   return (
     <div className="app__footer-box">
-      <a id="contact" className="anchor" />
+      <p id="contact" className="anchor">
+        {" "}
+      </p>
       <h3>Contact Me</h3>
       <div>
         <div className="app__contact-info">
@@ -69,7 +71,7 @@ const Footer = () => {
           <input type="submit" value="Send" />
         </form>
       </div>
-      <a className="anchor" />
+      <p className="anchor" />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import "./Projects.scss";
 const Projects = () => {
   return (
     <div className="app__project-box">
-      <a id="Projects" className="anchor" />
+      <p id="Projects" className="anchor" />
       <h3>Projects</h3>
       <projects.P3Tile />
     </div>
