@@ -7,15 +7,19 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   const handleSubmit = (event: FormEvent) => {
     axios
-      .post(
-        "/",
-        { name, email, message, "form-name": "contact" },
-        {
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        }
-      )
+      .post("/", encode({ "form-name": "contact", name, email, message }), {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      })
       .then(() => alert("Success!"))
       .catch((error) => alert(error));
     event.preventDefault();
