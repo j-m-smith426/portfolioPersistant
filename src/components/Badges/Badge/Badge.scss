@@ -1,0 +1,15 @@
+.app__badge{
+    padding: 1rem;
+    margin: 1rem;
+    width: 100px;
+    height: 150px;
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    // border-radius: 100px;
+    // box-shadow: -2px 2px var(--black-color);
+
+    svg{
+        // height: 4rem;
+        // width: 4rem;
+    }
+}

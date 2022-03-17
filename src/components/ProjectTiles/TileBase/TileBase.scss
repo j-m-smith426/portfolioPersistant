@@ -1,0 +1,24 @@
+.app__tileBase-box{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 200px;
+    position: relative;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border: 2px solid var(--black-color);
+
+    img{
+        max-height: 500px;
+        object-fit: contain;
+    }
+
+}
+
+.app__tile-info{
+
+    ul{
+        list-style: square;
+        text-align: left;
+    }
+}

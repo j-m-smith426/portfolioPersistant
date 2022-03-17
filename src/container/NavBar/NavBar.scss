@@ -1,0 +1,125 @@
+.nav__info{
+    display: flex;
+    
+    width:calc(100% - 2rem);
+    max-height: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background:  rgba(166, 166, 150, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(52, 56, 25, 0.8);
+    padding: 1rem 1rem;
+
+    position:fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.nav__name{
+    flex:0.4;
+    justify-self: flex-start;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 600;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    flex:0.6;
+    // width:100%;
+    list-style: none;
+    
+    li{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem;
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--black-color);
+            cursor: pointer;
+            font-weight: 400;
+
+            &:hover{
+                color: var(--primary-color);
+            }
+
+            transition: all 0.3s ease-in-out;
+        }
+        
+    }
+
+    @media screen and (max-width: 900px ) {
+        display: none;
+    }
+}
+
+.nav__menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: var(--secondary-color) ;
+    overflow: hidden;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    svg{
+        color: var(--white-color);
+        width: 70%;
+        height: 70%;
+    }
+
+    div{
+        position: fixed;
+        width: 60%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: rgb(166, 166, 150) !important;
+
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        z-index: 5;
+        height: 100vh;
+
+        svg{
+            color: var(--secondary-color);
+            width: 40px;
+            height: 40px;
+            
+            align-self: flex-end;
+            
+        }
+
+        ul{
+            list-style: none;
+            text-align: left;
+
+            li{
+                padding: 1rem;
+                
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: var(--black-color);
+                    z-index: 6;
+                }
+            } 
+        }
+
+        background: rgb(255,255,255);
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
