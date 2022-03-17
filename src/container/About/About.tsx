@@ -4,7 +4,7 @@ import "./About.scss";
 const About = () => {
   return (
     <div className="app__about-box">
-      <a id="About" className="anchor" />
+      <p id="About" className="anchor" />
       <h3>About</h3>
       <p>
         I am a fullstack developer who has worked on mobile and web based
@@ -12,7 +12,7 @@ const About = () => {
         pursue a job in software development. In my free time I enjoy playing
         video games and researching new project ideas.
       </p>
-      <a className="anchor" />
+      <p className="anchor" />
     </div>
   );
 };

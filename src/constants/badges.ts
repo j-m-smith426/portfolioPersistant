@@ -7,7 +7,7 @@ import HTMLBadge from "../components/Badges/HTMLBadge/HTMLBadge";
 import CSSBadge from "../components/Badges/CSSBadge/CSSBadge";
 import SCSSBadge from "../components/Badges/SCSSBadge/SCSSBadge";
 
-export default {
+const badges = {
   ReactBadge,
   JavaScriptBadge,
   NodeBadge,
@@ -17,3 +17,5 @@ export default {
   SCSSBadge,
   CSSBadge,
 };
+
+export default badges;
