@@ -1,34 +1,24 @@
 import React, { FormEvent, useState } from "react";
-import { init, sendForm } from "@emailjs/browser";
+import axios from "axios";
 
 import "./Footer.scss";
 const Footer = () => {
-  const {
-    REACT_APP_EMAIL_USER,
-    REACT_APP_EMAIL_SERVICE,
-    REACT_APP_EMAIL_TEMPLATE,
-  } = process.env;
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  init(REACT_APP_EMAIL_USER);
-
   const handleSubmit = (event: FormEvent) => {
+    axios
+      .post(
+        "/",
+        { name, email, message, "form-name": "contact" },
+        {
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        }
+      )
+      .then(() => alert("Success!"))
+      .catch((error) => alert(error));
     event.preventDefault();
-    sendForm(
-      REACT_APP_EMAIL_SERVICE,
-      REACT_APP_EMAIL_TEMPLATE,
-      "#contact-form"
-    ).then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
   };
 
   return (
@@ -42,14 +32,29 @@ const Footer = () => {
         </div>
         <form
           onSubmit={handleSubmit}
+          name="contact"
           className="app__contact-form"
           id="contact-form"
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <label htmlFor="name-field">Name: </label>
-          <input type="text" name="name" id="name-field" />
+          <input
+            type="text"
+            name="name"
+            id="name-field"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
           <label htmlFor="email-field">Email: </label>
-          <input type="email" name="email" id="email-field" />
+          <input
+            type="email"
+            name="email"
+            id="email-field"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
           <label htmlFor="message-area">Message: </label>
           <textarea
@@ -57,6 +62,8 @@ const Footer = () => {
             id="message-area"
             cols={30}
             rows={10}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
 
           <input type="submit" value="Send" />
