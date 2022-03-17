@@ -6,7 +6,7 @@ import "./Skills.scss";
 const Skills = () => {
   return (
     <div className="app__skills-box">
-      <a id="Skills" className="anchor" />
+      <p id="Skills" className="anchor" />
       <h3>Skills</h3>
       <div className="app__skills-frontend">
         <p>Frontend Skills</p>

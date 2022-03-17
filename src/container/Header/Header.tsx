@@ -12,7 +12,7 @@ const Header = () => {
           <p>Fullstack Developer</p>
         </div>
         <div className="app__header-img">
-          <img src={images.profilePic} />
+          <img src={images.profilePic} alt="profile" />
         </div>
       </div>
     </Fragment>
