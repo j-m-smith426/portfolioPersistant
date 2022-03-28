@@ -29,6 +29,7 @@ const Skills = () => {
         <div className="badge-list">
           <badges.JavaScriptBadge />
           <badges.JavaBadge />
+          <badges.SpringFrameworkBadge />
         </div>
       </div>
     </div>

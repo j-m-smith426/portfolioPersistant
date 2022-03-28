@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <div className="app__footer-box">
-      <p id="contact" className="anchor">
+      <p id="Contact" className="anchor">
         {" "}
       </p>
       <h3>Contact Me</h3>

@@ -1,12 +1,12 @@
 import React from "react";
 import Badge from "../Badge/Badge";
-// import { images } from "../../../constants";
+import { images } from "../../../constants";
 
 const CSSBadge = () => {
-  // const { ReactLogo } = images;
+  const { CSSLogo } = images;
   return (
     <Badge>
-      {/* <ReactLogo /> */}
+      <CSSLogo />
       <p>CSS</p>
     </Badge>
   );
