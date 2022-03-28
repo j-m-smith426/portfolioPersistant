@@ -6,6 +6,7 @@ import SpringBootBadge from "../components/Badges/SpringBootBadge/SpringBootBadg
 import HTMLBadge from "../components/Badges/HTMLBadge/HTMLBadge";
 import CSSBadge from "../components/Badges/CSSBadge/CSSBadge";
 import SCSSBadge from "../components/Badges/SCSSBadge/SCSSBadge";
+import SpringFrameworkBadge from "../components/Badges/SpringFrameworkBadge/SpringBootBadge";
 
 const badges = {
   ReactBadge,
@@ -16,6 +17,7 @@ const badges = {
   HTMLBadge,
   SCSSBadge,
   CSSBadge,
+  SpringFrameworkBadge,
 };
 
 export default badges;
