@@ -5,16 +5,7 @@ import "./Projects.scss";
 interface IProjectsProps {}
 
 const Projects: FC<IProjectsProps> = (props) => {
-	return (
-		<section className="projects">
-			<LoadingCard />
-			<ProjectCard />
-			<LoadingCard />
-			<LoadingCard />
-			<LoadingCard />
-			<LoadingCard />
-		</section>
-	);
+	return <section className="projects"></section>;
 };
 
 export default Projects;
