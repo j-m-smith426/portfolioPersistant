@@ -1,0 +1,25 @@
+.shineBG {
+	background: #ddd;
+	background: linear-gradient(
+		to right,
+		#f6f6f6d7 8%,
+		#f0f0f0 18%,
+		#f6f6f6d7 33%
+	);
+	animation-duration: 2.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: shine;
+	animation-timing-function: linear;
+
+	background-size: 120rem 100%;
+}
+
+@keyframes shine {
+	0% {
+		background-position: -120rem 0;
+	}
+	100% {
+		background-position: 120rem 0;
+	}
+}

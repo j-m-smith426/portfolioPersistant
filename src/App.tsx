@@ -1,18 +1,12 @@
 import "./App.css";
-
-import { About, Header, Footer, NavBar, Projects, Skills } from "./container";
+import { Main } from "./pages/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-      <Footer />
-    </div>
-  );
+	return (
+		<div className="App">
+			<Main />
+		</div>
+	);
 }
 
 export default App;
