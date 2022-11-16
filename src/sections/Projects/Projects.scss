@@ -1,11 +1,8 @@
 @import "../../utilities/variables.scss";
 
 .projects {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(min-content, 1fr));
-	grid-template-rows: repeat(2, minmax(10rem, max-content));
+	display: block;
 	align-items: center;
-	gap: 2rem 1rem;
 	padding: 2rem;
 
 	background-color: $color-primary-light;

@@ -16,7 +16,7 @@ export const Main = (props: IMainProps) => {
 			<TopNav />
 			<Header />
 			<Projects />
-			<Technology />
+			{/* <Technology /> */}
 			<Skills />
 			<Contact />
 			<Footer />

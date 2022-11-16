@@ -1,7 +1,7 @@
 .container {
 	width: 80%;
 	margin: 0 auto;
-
+	position: relative;
 	display: grid;
 	grid-template-rows: 6rem calc(90vh - 6rem);
 }
