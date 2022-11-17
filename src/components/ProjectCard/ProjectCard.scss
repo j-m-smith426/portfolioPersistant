@@ -1,20 +1,23 @@
 @import "../../utilities/animations.scss";
+@import "../../utilities/variables.scss";
 
 .card {
 	display: flex;
 	// position: relative;
 	margin: 1rem auto;
-	// max-width: 100rem;
+	max-width: 100rem;
 
-	width: 100rem;
+	width: 60rem;
 
 	&__img {
 		height: 35rem;
 		width: 20%;
-		border-radius: 10px;
-		padding: 0.5rem 0;
-		background-color: aqua;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		padding: 0.5rem 1rem;
+		background-color: $color-primary-dark;
 
+		z-index: 10;
 		img {
 			height: 100%;
 		}
@@ -22,9 +25,10 @@
 
 	&__content {
 		flex: 1 1;
-		background-color: #fefefe;
+		background-color: $color-primary-dark;
 
-		border-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
 		justify-self: center;
 
 		display: flex;
@@ -37,16 +41,11 @@
 		padding: 0.5rem 0;
 	}
 
-	&:hover &__content {
-		opacity: 0.8;
-	}
-
 	&__hover {
 		display: block;
 		width: 15rem;
 		height: 2rem;
 		border-radius: 1rem;
-		background-color: #fefefe;
 	}
 
 	&__title {

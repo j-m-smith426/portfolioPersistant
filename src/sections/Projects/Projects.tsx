@@ -18,7 +18,8 @@ const Projects: FC<IProjectsProps> = (props) => {
 					</div>
 				</div>
 			)}
-			<section className="projects" id="projects">
+			<h2 className="section__title">Projects</h2>
+			<section className="projects" id="Projects">
 				{projects.map((proj) => (
 					<ProjectCard {...proj} setData={setModelData} />
 				))}
