@@ -1,6 +1,23 @@
 @import "../../utilities/variables.scss";
 
 .footer {
-	height: 20rem;
+	display: flex;
+	height: 10rem;
+	width: 100%;
 	background-color: $color-primary-light;
+	font-size: 2rem;
+	align-items: center;
+	justify-content: space-between;
+
+	p {
+		display: flex;
+		align-items: center;
+		width: 40rem;
+		justify-content: space-evenly;
+	}
+
+	&--btn {
+		justify-self: end;
+		margin-right: 2rem;
+	}
 }
