@@ -1,0 +1,73 @@
+@import "../../utilities/animations.scss";
+
+.card {
+	position: relative;
+	margin: 1rem auto;
+	max-width: 20rem;
+	width: 20rem;
+
+	&__img {
+		height: 35rem;
+		width: 100%;
+		border-radius: 10px;
+		padding: 0.5rem 0;
+	}
+
+	&__loading {
+		height: 90%;
+		width: 100%;
+		background-color: rgb(124, 123, 123);
+
+		opacity: 0;
+		border-radius: 10px;
+		justify-self: center;
+		transition: opacity 0.5s;
+
+		position: absolute;
+		top: 3.5%;
+		left: 0;
+		z-index: 100;
+
+		display: grid;
+		grid-template-rows:
+			[title-start] 5rem [title-end seperate-start] minmax(5rem, 10rem)
+			[seperate-end] repeat(4, [list-start] 5rem [list-end]);
+		justify-content: center;
+		align-items: center;
+
+		padding: 0.5rem 0;
+	}
+
+	&:hover &__loading {
+		opacity: 0.8;
+	}
+
+	&__placeholder {
+		display: block;
+		width: 15rem;
+		height: 2rem;
+		border-radius: 1rem;
+		background-color: rgb(177, 176, 176);
+
+		&--1 {
+			height: 2.5rem;
+			grid-row: title-start 1 / title-end 1;
+		}
+
+		&--2 {
+			grid-row: list-start 1 / list-end 1;
+		}
+
+		&--3 {
+			grid-row: list-start 2 / list-end 2;
+		}
+
+		&--4 {
+			grid-row: list-start 3 / list-end 3;
+		}
+
+		&--5 {
+			grid-row: list-start 4 / list-end 4;
+		}
+	}
+}

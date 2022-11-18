@@ -1,0 +1,40 @@
+@import "../../utilities/variables.scss";
+@import "../../utilities/animations.scss";
+
+.skills {
+	font-size: 1.5rem;
+	background-color: $color-primary-light;
+	cursor: pointer;
+}
+
+.list {
+	list-style: none;
+
+	&__box {
+		cursor: default;
+		display: none;
+		height: 0px;
+		opacity: 0;
+		justify-content: center;
+		// transition: all 3s 1s;
+		animation: grow 1s;
+		// animation-fill-mode: forwards;
+	}
+
+	&__title {
+		border-bottom: 1px solid black;
+		font-weight: bold;
+	}
+
+	li {
+		padding: 0.5rem;
+	}
+}
+
+.list__box.open {
+	display: flex;
+	height: 35rem;
+	opacity: 1;
+	// animation: shrink 1s;
+	// animation-fill-mode: backwards;
+}

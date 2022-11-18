@@ -1,0 +1,18 @@
+@import "../../utilities/variables.scss";
+
+.projects {
+	display: grid;
+	align-items: center;
+	padding: 2rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 1rem;
+
+	background-color: $color-primary-light;
+}
+
+.section__title {
+	background-color: $color-primary-light;
+	font-size: 2rem;
+	padding: 1rem;
+	margin: 0;
+}

@@ -9,6 +9,7 @@ const Projects = () => {
       <p id="Projects" className="anchor" />
       <h3>Projects</h3>
       <projects.P3Tile />
+      <projects.FinancialPlanner />
     </div>
   );
 };
