@@ -4,14 +4,22 @@ interface ILinkProps {
 	href?: string;
 	children: string;
 	class: String;
-	onClick: () => void;
+	resume?: boolean;
+	onClick?: () => void;
 }
 
 const Link: FC<ILinkProps> = (props) => {
 	return (
-		<button className={`btn btn${props.class}`} onClick={() => props.onClick()}>
+		<button
+			className={`btn btn${props.class}`}
+			onClick={() => props.onClick && props.onClick()}
+		>
 			{props.href ? (
-				<a href={props.href} className={`link`}>
+				<a
+					href={props.href}
+					className={`link`}
+					target={props.resume ? "_blank" : "_self"}
+				>
 					{props.children}
 				</a>
 			) : (
