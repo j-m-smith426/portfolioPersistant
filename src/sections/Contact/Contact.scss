@@ -1,0 +1,59 @@
+@import "../../utilities/variables.scss";
+
+.contact {
+	display: flex;
+	height: 80rem;
+	background-color: $color-primary-dark;
+	// justify-content: space-around;
+	align-items: center;
+	&__image {
+		&--box {
+			padding: 2rem;
+			height: 76rem;
+			img {
+				height: 100%;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		font-size: 2rem;
+		text-align: left;
+
+		p {
+			display: flex;
+			background-color: $color-primary-light;
+			padding: 1rem;
+			border-radius: 10px;
+			justify-content: space-between;
+		}
+
+		textarea {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.input {
+	font-size: 2rem;
+	margin-left: 4rem;
+	flex: 1;
+}
+
+.form__submit {
+	font-size: 1.5rem;
+	text-decoration: none;
+	background-color: $color-primary-light;
+	padding: 1rem;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+
+.submit--box {
+	// width: min-content;
+	background-color: $color-primary !important;
+	justify-content: center !important;
+}

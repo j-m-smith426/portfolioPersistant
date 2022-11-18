@@ -10,27 +10,22 @@ const TopNav: FC<ITopNavProps> = (props) => {
 			<div className="top-nav__icon">JS</div>
 			<ul className="top-nav__list">
 				<li className="top-nav__item">
-					<Link href="#" class="--nav">
+					<Link href="/" class="--nav">
 						Home
 					</Link>
 				</li>
 				<li className="top-nav__item">
-					<Link href="#" class="--nav">
+					<Link href="#Projects" class="--nav">
 						Projects
 					</Link>
 				</li>
 				<li className="top-nav__item">
-					<Link href="#" class="--nav">
-						Tech
-					</Link>
-				</li>
-				<li className="top-nav__item">
-					<Link href="#" class="--nav">
+					<Link href="#Skills" class="--nav">
 						Skills
 					</Link>
 				</li>
 				<li className="top-nav__item">
-					<Link href="#" class="--nav">
+					<Link href="#Contact" class="--nav">
 						Contact
 					</Link>
 				</li>

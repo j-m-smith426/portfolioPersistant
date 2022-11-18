@@ -12,7 +12,7 @@ const Header: FC<IHeaderProps> = (props) => {
 			<h3 className="heading-3">Software Engineer</h3>
 			<img src={profile} alt="Profile Picture" className="header__img" />
 
-			<Link href="#" class="--main">
+			<Link href="/assets/JoabSmithResume.pdf" class="--main" resume>
 				View Resume
 			</Link>
 		</header>

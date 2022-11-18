@@ -2,11 +2,17 @@
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(min-content, 1fr));
-	grid-template-rows: repeat(2, minmax(10rem, max-content));
 	align-items: center;
-	gap: 2rem 1rem;
 	padding: 2rem;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 1rem;
 
 	background-color: $color-primary-light;
+}
+
+.section__title {
+	background-color: $color-primary-light;
+	font-size: 2rem;
+	padding: 1rem;
+	margin: 0;
 }

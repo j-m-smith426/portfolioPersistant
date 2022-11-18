@@ -1,48 +1,44 @@
 @import "../../utilities/animations.scss";
+@import "../../utilities/variables.scss";
 
 .card {
-	position: relative;
+	display: flex;
+	// position: relative;
 	margin: 1rem auto;
-	max-width: 20rem;
+	max-width: 100rem;
 
-	width: 20rem;
+	width: 60rem;
 
 	&__img {
 		height: 35rem;
-		width: 100%;
-		border-radius: 10px;
-		padding: 0.5rem 0;
+		width: 20%;
+		border-top-left-radius: 10px;
+		border-bottom-left-radius: 10px;
+		padding: 0.5rem 1rem;
+		background-color: $color-primary-dark;
+
+		z-index: 10;
+		img {
+			height: 100%;
+		}
 	}
 
 	&__content {
-		height: 90%;
-		width: 100%;
-		background-color: #fefefe;
+		flex: 1 1;
+		background-color: $color-primary-dark;
 
-		opacity: 0;
-		border-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
 		justify-self: center;
-		transition: opacity 0.5s;
 
-		position: absolute;
-		top: 3.5%;
-		left: 0;
-		z-index: 100;
+		display: flex;
+		flex-direction: column;
 
-		display: grid;
-		grid-template-rows:
-			[title-start] 5rem [title-end seperate-start] minmax(5rem, 10rem)
-			[seperate-end] repeat(4, [list-start] 5rem [list-end]);
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
 
 		font-size: 1.5rem;
 		padding: 0.5rem 0;
-		margin: auto 0;
-	}
-
-	&:hover &__content {
-		opacity: 0.8;
 	}
 
 	&__hover {
@@ -50,31 +46,59 @@
 		width: 15rem;
 		height: 2rem;
 		border-radius: 1rem;
-		background-color: #fefefe;
-
-		&--1 {
-			height: 2.5rem;
-			grid-row: title-start 1 / title-end 1;
-		}
-
-		&--2 {
-			grid-row: list-start 1 / list-end 1;
-		}
-
-		&--3 {
-			grid-row: list-start 2 / list-end 2;
-		}
-
-		&--4 {
-			grid-row: list-start 3 / list-end 3;
-		}
-
-		&--5 {
-			grid-row: list-start 4 / list-end 4;
-		}
 	}
 
 	&__title {
 		font-size: 2rem;
+	}
+}
+
+.model {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(#807e7e, 0.5);
+	z-index: 100;
+
+	justify-content: center;
+	align-items: center;
+
+	&__box {
+		width: 100rem;
+		height: 60rem;
+		background-color: #fefefe;
+		display: grid;
+		grid-template-columns: 40rem 80rem;
+		gap: 0 5rem;
+		padding: 1rem;
+	}
+
+	&__image {
+		height: 60rem;
+		width: auto;
+
+		&--content {
+			height: 100%;
+		}
+	}
+
+	&__content {
+		width: 50rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1.8rem;
+			text-align: right;
+		}
 	}
 }
