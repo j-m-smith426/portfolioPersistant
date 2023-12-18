@@ -1,14 +1,10 @@
 import "./App.css";
+import Titleblock from "./components/TitleBlock/Titleblock";
 
 function App() {
 	return (
 		<div className="App">
-			<div className="title_block">
-				<div className="title_block--left">
-					<h1>Joab Smith</h1>
-					<h2>Software Developer</h2>
-				</div>
-					<p>A recent Graduate looking for my first job as a junior Software Engineer</p>
+			<Titleblock />
 				<div className="tech_cards">
 					<div className="card">JavaScript</div>
 					<div className="card">React</div>
@@ -20,7 +16,6 @@ function App() {
 					<div className="card">Docker</div>
 					<div className="card">AWS</div>
 				</div>
-			</div>
 			
 		</div>
 	);

@@ -6,6 +6,12 @@ html{
   /* font-size: 62.5%; */
 }
 
+:root {
+  --fs-xl: clamp(2rem, 5vw + 1rem, 5rem);
+  --fs-600: 2rem;
+  --fs-400: 1rem;
+}
+
 html > * {
   box-sizing: inherit;
 }
@@ -25,11 +31,17 @@ code {
 }
 
 h1 {
+  font-size: var(--fs-xl);
   padding: 0;
   margin: 0;
 }
 
 h2 {
+  font-size: var(--fs-600);
   padding: 0;
   margin: 0;
+}
+
+p {
+  font-size: var(--fs-400);
 }
