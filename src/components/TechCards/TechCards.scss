@@ -1,0 +1,10 @@
+.tech_cards{
+  display: grid;
+  justify-content: center;
+  gap: 2px 2px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+  padding: 3px;
+  
+  background-color: #da7c46f5;
+  border-bottom: 2px solid black;
+}
