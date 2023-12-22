@@ -2,6 +2,19 @@
   display: grid;
   justify-content: center;
   gap: 2px 2px;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+  grid-template-columns: repeat(auto-fit, clamp(100px, 30vw + 1rem, 50vw));
   padding: 3px;
+}
+
+.row {
+  // display: flex;
+  flex: 1;
+}
+
+.img_holder {
+  float: left;
+  width: 100px;
+  height: 7rem;
+  background-color: rgb(119, 119, 119);
+
 }
