@@ -1,5 +1,6 @@
 import "./App.css";
-import Card from "./components/Card/Card";
+import Bio from "./components/Bio/Bio";
+import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 import TechCards from "./components/TechCards/TechCards";
 import Titleblock from "./components/TitleBlock/Titleblock";
@@ -10,6 +11,8 @@ function App() {
 			<Titleblock />
 			<TechCards />
 			<Projects />
+			<Bio />
+			<Contact />
 		</div>
 	);
 }

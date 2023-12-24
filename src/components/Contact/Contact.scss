@@ -1,0 +1,13 @@
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(400px, 50%, 100%));
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+    &_right {
+        display: flex;
+        flex: 1 1;
+        flex-direction: column;
+    }
+}
