@@ -1,42 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
 import "./Projects.scss";
+import { getProjects, project } from '../../sanitysetup';
+import Button from '../Button/Button';
 type Props = {}
 
 const Projects = (props: Props) => {
+  const [projects, setProjects] = useState<project[]>([]);
+  useEffect(() => {
+    getProject();
+  })
+  const getProject = async () => {
+    const projData:project[] = await getProjects();
+    setProjects(projData);
+  }
+
+  const projectElements = projects.map((project) => (
+    <Card size='m' className='long even' key={project._id}>
+      <h3>{project.title}</h3>
+      <div className='row'>
+        {/* {!project.professional && (<div className="img_holder"></div>)} */}
+        <p>{project.Summary}</p>
+        <div className="tech_cards">
+        {project.techstack.map((tech) => (<Card size="sm" className='even'>{tech.skill}</Card>))}
+        </div>
+        <Button size='sm' className='link hidden hover'>Learn more</Button>
+        
+      </div>
+    </Card>
+  ))
+
   return (
     <>
           <h3 className="projects_title">Projects</h3>
       <div className="projects">
-      <Card size='m' className='long'>
-        <h3>Title</h3>
-        <div className='row'>
-          <div className="img_holder"></div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis maxime mollitia dolor odit repellendus excepturi quae quaerat quidem facere fuga dicta voluptas magnam et, repellat earum voluptates ducimus sapiente a tempore distinctio illo? Molestias, sapiente temporibus cupiditate repellendus aliquam amet sunt nobis possimus eius fugiat doloribus exercitationem laborum accusamus enim!</p>
-        </div>
-      </Card>
-      <Card size='m' className='long'>
-        <h3>Title</h3>
-        <div className='row'>
-          <div className="img_holder"></div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis maxime mollitia dolor odit repellendus excepturi quae quaerat quidem facere fuga dicta voluptas magnam et, repellat earum voluptates ducimus sapiente a tempore distinctio illo? Molestias, sapiente temporibus cupiditate repellendus aliquam amet sunt nobis possimus eius fugiat doloribus exercitationem laborum accusamus enim!</p>
-        </div>
-      </Card>
-      <Card size='m' className='long'>
-        <h3>Title</h3>
-        <div className='row'>
-          <div className="img_holder"></div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis maxime mollitia dolor odit repellendus excepturi quae quaerat quidem facere fuga dicta voluptas magnam et, repellat earum voluptates ducimus sapiente a tempore distinctio illo? Molestias, sapiente temporibus cupiditate repellendus aliquam amet sunt nobis possimus eius fugiat doloribus exercitationem laborum accusamus enim!</p>
-        </div>
-      </Card>
-      <Card size='m' className='long'>
-        <h3>Title</h3>
-        <div className='row'>
-          <div className="img_holder"></div>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis maxime mollitia dolor odit repellendus excepturi quae quaerat quidem facere fuga dicta voluptas magnam et, repellat earum voluptates ducimus sapiente a tempore distinctio illo? Molestias, sapiente temporibus cupiditate repellendus aliquam amet sunt nobis possimus eius fugiat doloribus exercitationem laborum accusamus enim!</p>
-        </div>
-      </Card>
+      {projectElements}
       </div>
       </>
   )

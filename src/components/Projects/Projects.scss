@@ -2,14 +2,24 @@
   display: grid;
   justify-content: center;
   gap: 2px 2px;
-  grid-template-columns: repeat(auto-fit, clamp(100px, 30vw + 1rem, 50vw));
+  grid-template-columns: repeat(auto-fit, clamp(250px, 30vw + 1rem, 50vw));
   padding: 3px;
 }
 
 .img_holder {
-  float: left;
+  // float: left;
   width: 100px;
   height: 7rem;
   background-color: rgb(119, 119, 119);
+
+  
+
+}
+
+.row{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
 
 }

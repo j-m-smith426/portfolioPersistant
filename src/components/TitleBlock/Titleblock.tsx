@@ -13,7 +13,7 @@ function Titleblock({}: Props) {
           </div>
           <div className="title_block--right">
               <p>A recent Graduate looking for my first job as a junior Software Engineer</p>
-              <Button size='m'>{`View resume ->`}</Button>
+              <Button size='m' className='link'>{`View resume ->`}</Button>
           </div>
       </div>
   )
