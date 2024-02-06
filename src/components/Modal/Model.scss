@@ -1,0 +1,20 @@
+.modal {
+    position: absolute;
+    background-color: #777676;
+    opacity: 80%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &_content {
+        max-width: 80%;
+        padding: 10px;
+        margin: auto;
+        background-color: white;
+    }
+}
+
+.hidden {
+    display: none;
+}

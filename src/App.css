@@ -3,6 +3,8 @@
   max-width: 1500px;
   margin: auto;
 
+  position: relative;
+
   @media (max-width: 1500px) {
     margin: 10px;
   }

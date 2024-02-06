@@ -12,7 +12,7 @@ type Props = {
 
 const Card = (props: Props) => {
   return (
-    <div className={`${props.size} button ${props.className}`}>{props.children}</div>
+    <button className={`button ${props.size} ${props.className}`}>{props.children}</button>
   )
 }
 
