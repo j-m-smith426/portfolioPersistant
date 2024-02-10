@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from '../Card/Card';
 
 import "./Projects.scss";
 import { getProjects, project } from '../../sanitysetup';
 import Button from '../Button/Button';
+import { DispatchContext } from '../../utility/contextConstructors';
 type Props = {}
 
 const Projects = (props: Props) => {
@@ -11,9 +12,21 @@ const Projects = (props: Props) => {
   useEffect(() => {
     getProject();
   })
+
+  //Retrieve List of Projects
   const getProject = async () => {
     const projData:project[] = await getProjects();
     setProjects(projData);
+  }
+  // Pull dispatch function into component
+  const dispatch = useContext(DispatchContext);
+
+  // Show model with new Info on Click
+  const handleClick = (data:project) => {
+    dispatch({
+      type: "updateInfo",
+      payload: data
+    })
   }
 
   const projectElements = projects.map((project) => (
@@ -25,7 +38,7 @@ const Projects = (props: Props) => {
         <div className="tech_cards">
         {project.techstack.map((tech) => (<Card size="sm" className='even'>{tech.skill}</Card>))}
         </div>
-        <Button size='sm' className='link hidden hover'>Learn more</Button>
+        <Button size='sm' className='link hover' onClick={() => handleClick(project)}>Learn more</Button>
         
       </div>
     </Card>

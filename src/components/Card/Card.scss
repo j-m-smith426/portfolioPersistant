@@ -7,7 +7,7 @@
   border-radius: 10px;
   background-color: white;
 
-  text-align: center;
+
 
   & > svg{
     max-width: 100%;
@@ -22,7 +22,7 @@
   }
 
   &.long{
-    width: clamp(250px, 30vw + 1rem, 50vw);
+    width: clamp(250px, 30vw + 1rem, 30vw);
     min-height: 10rem;
   }
 

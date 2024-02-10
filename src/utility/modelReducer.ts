@@ -1,23 +1,24 @@
+import { useReducer } from "react";
 import { bio, project } from "../sanitysetup";
-
-type modelInfo =
+// Reducer State template
+export type modelInfo =
 {
     hidden: boolean;
-    content: project | bio
+    content: project | bio 
 }
-
+// Reducer Actions
 enum modelActionsType {
     SHOW ="show",
     HIDE ="hide",
     UPDATE ="updateInfo"
 }
-
-type modelActions = {
+// Reducer actions template
+export type modelActions = {
   type: modelActionsType;
-  payload: project | bio;
+  payload: project | bio ;
 };
-
-const modelReducer = (model:modelInfo, action:modelActions) => {
+// Reducer to handle state of Model and Model Contents
+export const modelReducer = (model:modelInfo, action:modelActions) => {
 
     const newInfo:modelInfo = {...model};
     switch (action.type){
@@ -30,6 +31,7 @@ const modelReducer = (model:modelInfo, action:modelActions) => {
             return newInfo;
             break;
         case modelActionsType.UPDATE:
+            newInfo.hidden = false;
             newInfo.content = action.payload
             return newInfo;
             break;
@@ -39,3 +41,20 @@ const modelReducer = (model:modelInfo, action:modelActions) => {
 
     }
 }
+// Initial Content for Reducer
+const initialContent:project = {
+    _id: "Test",
+    title: "Initial",
+    professional: false,
+    description: "",
+    Summary: "",
+    githuburl: "",
+    techstack: []
+}
+
+// Initial State for Reducer
+export const initialState:modelInfo = {
+    hidden: true,
+    content: initialContent
+}
+

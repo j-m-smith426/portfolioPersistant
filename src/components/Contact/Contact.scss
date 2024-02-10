@@ -4,10 +4,26 @@
     justify-items: center;
     justify-content: center;
     align-items: center;
+     background-color: #d4a373;
 
     &_right {
         display: flex;
         flex: 1 1;
         flex-direction: column;
     }
+
+    &_card {
+        text-align: left;
+        padding: 1rem !important;
+
+        & input {
+            height: 1.2rem;
+            width: 20rem;
+        }
+
+        & textarea {
+            height: 4rem;
+        }
+    }
 }
+

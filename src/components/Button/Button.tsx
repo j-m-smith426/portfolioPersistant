@@ -8,11 +8,12 @@ type Props = {
     children: ReactNode;
     size: Size;
     className: string;
+    onClick?: () => void;
 }
 
 const Card = (props: Props) => {
   return (
-    <button className={`button ${props.size} ${props.className}`}>{props.children}</button>
+    <button className={`button ${props.size} ${props.className}`} onClick={() => props.onClick()}>{props.children}</button>
   )
 }
 

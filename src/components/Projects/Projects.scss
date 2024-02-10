@@ -1,9 +1,10 @@
 .projects{
   display: grid;
   justify-content: center;
-  gap: 2px 2px;
+  gap: 3px 3px;
   grid-template-columns: repeat(auto-fit, clamp(250px, 30vw + 1rem, 50vw));
   padding: 3px;
+  background-color: #d4a373;
 }
 
 .img_holder {
