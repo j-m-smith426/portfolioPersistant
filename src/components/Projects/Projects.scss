@@ -4,6 +4,8 @@
   gap: 3px 3px;
   grid-template-columns: repeat(auto-fit, clamp(250px, 30vw + 1rem, 50vw));
   padding: 3px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #d4a373;
 }
 

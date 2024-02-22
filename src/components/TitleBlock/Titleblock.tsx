@@ -11,10 +11,6 @@ function Titleblock({}: Props) {
     // Pull dispatch function into component
     const dispatch = useContext(DispatchContext);
 
-    // Show model with new Info on Click
-    const handleClick = () => {
-        
-    }
 
   return (
       <div className="title_block">

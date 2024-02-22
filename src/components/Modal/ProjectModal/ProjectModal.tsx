@@ -11,6 +11,8 @@ const ProjectModal = (props: Props) => {
     <div>
         <h2>{project.title}</h2>
         <p>{project.Summary}</p>
+        <br/>
+        <p>{project.description}</p>
     </div>
   )
 }

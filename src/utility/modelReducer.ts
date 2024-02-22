@@ -4,7 +4,7 @@ import { bio, project } from "../sanitysetup";
 export type modelInfo =
 {
     hidden: boolean;
-    content: project | bio 
+    content: project
 }
 // Reducer Actions
 enum modelActionsType {
@@ -15,7 +15,7 @@ enum modelActionsType {
 // Reducer actions template
 export type modelActions = {
   type: modelActionsType;
-  payload: project | bio ;
+  payload: project ;
 };
 // Reducer to handle state of Model and Model Contents
 export const modelReducer = (model:modelInfo, action:modelActions) => {

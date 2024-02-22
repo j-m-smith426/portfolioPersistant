@@ -20,11 +20,11 @@ const Contact = (props: Props) => {
         </div>
         <Card size='l' className='contact_card'>
 
-              <form action="" className="contact_right">
+        <form name="contact" method="POST" data-netlify="true" className="contact_right">
                 {name}
                 {email}
                 {message}
-                <Button size='m' className='submit'>Submit</Button>
+                <Button size='m' type='submit' className='submit'>Submit</Button>
             </form>
         </Card>
         

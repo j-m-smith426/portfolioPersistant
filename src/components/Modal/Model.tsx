@@ -5,6 +5,7 @@ import { project } from '../../sanitysetup';
 import { DispatchContext } from '../../utility/contextConstructors';
 import Button from '../Button/Button';
 import { modelInfo } from '../../utility/modelReducer';
+import ProjectModal from './ProjectModal/ProjectModal';
 
 type Props = {
   hidden:boolean,
@@ -24,17 +25,14 @@ const Model = (props: Props) => {
     })
   }
 
-  //Determine which body to show.
-  const content = () => {
-    
-  }
+  const {content} = props.data
 
   return (
     <>
     <div className={`modal ${props.hidden && 'hidden'}`}>
       <div className="modal_bg" />
     <div className="modal_content">
-        
+        <ProjectModal project={content}/>
       <Button size='sm' className='' onClick={() => handleClick()}>Close</Button>
       </div>
     </div>

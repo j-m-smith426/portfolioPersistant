@@ -27,7 +27,7 @@ const Bio = (props: Props) => {
     })
   }
   return (
-    <div>
+    <div className='bio'>
         <h3>Bio</h3>
         <p>{bio && bio.Summary}</p>
     </div>
