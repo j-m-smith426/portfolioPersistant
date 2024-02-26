@@ -3,7 +3,13 @@ html{
   margin: 0;
   box-sizing: border-box;
 
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+}
+
+:root {
+  --fs-xl: clamp(2rem, 5vw + 1rem, 5rem);
+  --fs-600: 2rem;
+  --fs-400: 1rem;
 }
 
 html > * {
@@ -22,4 +28,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  padding: 0;
+  margin: 0;
+}
+
+h2, .m {
+  font-size: var(--fs-600);
+  padding: 0;
+  margin: 0;
+}
+
+p, .sm {
+  font-size: var(--fs-400);
 }

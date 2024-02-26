@@ -1,0 +1,28 @@
+.projects{
+  display: grid;
+  justify-content: center;
+  gap: 3px 3px;
+  grid-template-columns: repeat(auto-fit, clamp(250px, 30vw + 1rem, 50vw));
+  padding: 3px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #d4a373;
+}
+
+.img_holder {
+  // float: left;
+  width: 100px;
+  height: 7rem;
+  background-color: rgb(119, 119, 119);
+
+  
+
+}
+
+.row{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+
+}

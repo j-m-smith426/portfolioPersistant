@@ -1,0 +1,28 @@
+.button {
+  margin: 5px !important;
+  padding: .3rem !important;
+  background-color: #faedcd;
+  border-radius: 10px;
+
+}
+
+.link {
+  background-color: #faedcd;
+  
+  &:hover {
+    background-color: #FEFAE0;
+    box-shadow: 10px 5px 5px #faedcd ;
+    transition: all 1s ease-out;
+    transform: translateX(-10px) translateY(-5px);
+    cursor: pointer;
+  }
+
+  & > a {
+    text-decoration: none;
+  }
+
+}
+
+.submit {
+  cursor: pointer;
+}
