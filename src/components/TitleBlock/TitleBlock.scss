@@ -1,0 +1,30 @@
+.title_block {
+  border-bottom: 2px solid black;
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, clamp(200px, 50% - 5px, 50%));
+  padding: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #d4a373;
+
+  
+}
+
+.title_block--left{
+  
+}
+
+.title_block--right{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.end{
+  align-self: flex-end;
+}

@@ -1,1 +1,0 @@
-# Joab Smith Portfolio
